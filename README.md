@@ -1,4 +1,4 @@
 # collider
 Particles collider based on event-driven simulation
 
-![](collider.gif)
+demo: https://youtu.be/MSLtP2ln63o
