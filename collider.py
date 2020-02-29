@@ -154,14 +154,16 @@ class System:
         for disk in self.disks:
             self.predict_collisions(disk, limit)
         heapq.heappush(self.events, Event(0, None, None))
-        while len(self.events):
+
+        while self.render.simulate:
             event = heapq.heappop(self.events)
 
             if not event.is_valid():
                 continue
 
-            for disk in self.disks:
-                disk.move(event.t - self.t)
+            if self.t != event.t:
+                for disk in self.disks:
+                    disk.move(event.t - self.t)
             self.t = event.t
 
             a, b = event.disk_a, event.disk_b

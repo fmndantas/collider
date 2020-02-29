@@ -1,8 +1,6 @@
-from collisor import Disk, System
+from collider import Disk, System
 
 if __name__ == '__main__':
-    disks = [Disk(radius=0.005) for _ in range(300)]
-    print('created disks')
+    disks = [Disk(radius=0.01) for _ in range(100)]
     system = System(disks, width=700, height=700)
-    print('created system')
-    system.simulate(10000, 50)
+    system.simulate(1000, 24)

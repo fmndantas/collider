@@ -1,7 +1,7 @@
-from collisor import Disk, System
+from collider import Disk, System
 
 if __name__ == '__main__':
-    r = 0.02
+    r = 0.05
     d = 2 * r
     v = 0
 
@@ -13,5 +13,5 @@ if __name__ == '__main__':
     ball_E = Disk(rx=1, ry=1, radius=r, vx=-2.4, vy=-4)
 
     balls = [ball_A, ball_B, ball_C, ball_D, ball_E]
-    system = System(balls, width=800, height=800)
+    system = System(balls, width=400, height=400)
     system.simulate(10000, 60)
