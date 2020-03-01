@@ -1,4 +1,9 @@
 # collider
 Particles collider based on event-driven simulation
 
-demo: https://youtu.be/MSLtP2ln63o
+# Demo
+
+```python3 ten_disks.py```
+
+![](collider.gif)
+
