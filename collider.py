@@ -161,9 +161,9 @@ class System:
             if not event.is_valid():
                 continue
 
-            if self.t != event.t:
-                for disk in self.disks:
-                    disk.move(event.t - self.t)
+            for disk in self.disks:
+                disk.move(event.t - self.t)
+
             self.t = event.t
 
             a, b = event.disk_a, event.disk_b
